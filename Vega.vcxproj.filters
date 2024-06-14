@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Entrypoints.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Invoker.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Pointers.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking.hpp">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Natives.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="PrecompiledHeader.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternScanner.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionTypes.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\KeyPressType.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\AbstractOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\SimpleOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\Manager.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\Submenu.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\DrawHelper.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeCallHelper.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomText.hpp">
+      <Filter>Script\Custom Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\SubmenuOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\NumberOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\BoolOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\ChooseOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\Toggleable.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\OptionFlags.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Branding.hpp">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\PlayerOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\netObject.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\networkSyncData.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\netSyncTree.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\netBuffer.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\netBlender.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CNavigation.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPedFactory.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CWantedData.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CModelInfo.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPed.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPedStyle.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\IPAddress.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPlayerInfo.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CTextInfo.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\BGRAColor.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CResolution.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CNonPhysicalPlayerData.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CNetGamePlayer.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CNetworkPlayerMgr.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\Declarations.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="XorString.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CWeaponInfo.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CAmmoInfo.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\WeaponModifiers.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\BreakOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\HeaderType.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Lists.hpp">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CEntityPool.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPedPool.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CVehiclePool.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\WeaponOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptGlobal.hpp">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\NumberBoolOption.hpp">
+      <Filter>UI\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CObjectPool.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPickupPool.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CPickup.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CHandlingData.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CVehicle.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CVehicleMods.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CVehicleVisualMods.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CVehicleAudio.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\WorldOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CTimeDate.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\MiscOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CObject.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconstructed Classes\CWeaponManager.hpp">
+      <Filter>Game\Reconstructed Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\SelectedPlayerSubmenu.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CharStream.hpp">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptCallback.hpp">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\VehicleOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\AccountOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\SpoonerOptions.hpp">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptHandle.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Remote.hpp">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="User Interface\InstructionalButtons.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptMgr.hpp">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui_impl_dx11.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui_impl_win32.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DRender.hpp">
+      <Filter>Hook\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScript.hpp">
+      <Filter>Scripts\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="LogScript.hpp">
+      <Filter>Scripts\Log</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Pointers.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="PrecompiledHeader.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="User Interface\Manager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Interface\Submenu.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="User Interface\DrawHelper.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Invoker.cpp">
+      <Filter>Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomText.cpp">
+      <Filter>Script\Custom Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\WeaponModifiers.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Lists.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptGlobal.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\MiscOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="User Interface\SelectedPlayerSubmenu.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\WeaponOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\WorldOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptCallback.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\VehicleOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\PlayerOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\AccountOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\SpoonerOptions.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Types.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="User Interface\InstructionalButtons.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_impl_dx11.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_impl_win32.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DRender.cpp">
+      <Filter>Hook\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScript.cpp">
+      <Filter>Scripts\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="LogScript.cpp">
+      <Filter>Scripts\Log</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{189cb9d4-bfa5-4884-b032-0e516c29b5bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Natives">
+      <UniqueIdentifier>{ea6564f6-07db-4b25-8755-2df3daa9a8af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{5ed4189d-3e67-4420-aa3d-6f3c3e9e7639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook">
+      <UniqueIdentifier>{12d6f2d3-c5a5-4576-a859-b1d20edc91c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{8c91eb4a-dc14-457d-a493-18baa96c633f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{904fcf58-ffb3-43db-a3c3-25fd313f6053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Options">
+      <UniqueIdentifier>{5c082fb2-cd37-43b9-8931-30083552bde6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Custom Text">
+      <UniqueIdentifier>{9b08d412-3bd3-4fe4-8b70-ffddbd85b177}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Reconstructed Classes">
+      <UniqueIdentifier>{2d8c63be-7e87-4cec-b58b-9fafde70bea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{36044ede-b884-4d89-af41-d48e89ce0c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook\Renderer">
+      <UniqueIdentifier>{537c7c3b-9442-485e-8cc5-19bc493b401c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{85b2357f-f674-4a43-8a48-cae5f65c41cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{e6abe2f4-85ed-4a43-aed9-ef5e15ff35b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Main">
+      <UniqueIdentifier>{c6b8e6f9-ea2e-4b0b-a508-224fd2d19fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Log">
+      <UniqueIdentifier>{8d1a5558-be23-4683-84e9-90c37040b4ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

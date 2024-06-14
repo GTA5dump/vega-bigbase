@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dev|x64">
+      <Configuration>Dev</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{5868EC0D-5CD9-4AD5-9380-07DD30E3A653}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Vega</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Binaries\$(Configuration)\Intermediates\</IntDir>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Binaries\$(Configuration)\Intermediates\</IntDir>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Binaries\$(Configuration)\Intermediates\</IntDir>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;VEGA_EXPORTS;_WINDOWS;_USRDLL;VEGA_DEBUG;VEGA_DEV;_USE_MATH_DEFINES ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\Includes</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <EnablePREfast>false</EnablePREfast>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Binaries</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;VEGA_EXPORTS;_WINDOWS;_USRDLL;VEGA_DEV;_USE_MATH_DEFINES ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\Includes</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <EnablePREfast>false</EnablePREfast>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Binaries</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;VEGA_EXPORTS;_WINDOWS;_USRDLL;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\Includes</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <EnablePREfast>false</EnablePREfast>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Libs</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libraries\Includes\ImGui\imconfig.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imgui_internal.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imstb_textedit.h" />
+    <ClInclude Include="..\Libraries\Includes\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Branding.hpp" />
+    <ClInclude Include="CharStream.hpp" />
+    <ClInclude Include="CustomText.hpp" />
+    <ClInclude Include="D3DRender.hpp" />
+    <ClInclude Include="Entrypoints.hpp" />
+    <ClInclude Include="Enums.hpp" />
+    <ClInclude Include="Features\AccountOptions.hpp" />
+    <ClInclude Include="Features\MiscOptions.hpp" />
+    <ClInclude Include="Features\PlayerOptions.hpp" />
+    <ClInclude Include="Features\SpoonerOptions.hpp" />
+    <ClInclude Include="Features\VehicleOptions.hpp" />
+    <ClInclude Include="Features\WeaponModifiers.hpp" />
+    <ClInclude Include="Features\WeaponOptions.hpp" />
+    <ClInclude Include="Features\WorldOptions.hpp" />
+    <ClInclude Include="FunctionTypes.hpp" />
+    <ClInclude Include="LogScript.hpp" />
+    <ClInclude Include="Pointers.hpp" />
+    <ClInclude Include="Hooking.hpp" />
+    <ClInclude Include="Invoker.hpp" />
+    <ClInclude Include="Lists.hpp" />
+    <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="Main.hpp" />
+    <ClInclude Include="NativeCallHelper.hpp" />
+    <ClInclude Include="Natives.hpp" />
+    <ClInclude Include="PatternScanner.hpp" />
+    <ClInclude Include="PrecompiledHeader.hpp" />
+    <ClInclude Include="Reconstructed Classes\BGRAColor.hpp" />
+    <ClInclude Include="Reconstructed Classes\CAmmoInfo.hpp" />
+    <ClInclude Include="Reconstructed Classes\CHandlingData.hpp" />
+    <ClInclude Include="Reconstructed Classes\CModelInfo.hpp" />
+    <ClInclude Include="Reconstructed Classes\CNavigation.hpp" />
+    <ClInclude Include="Reconstructed Classes\CNetGamePlayer.hpp" />
+    <ClInclude Include="Reconstructed Classes\CNetworkPlayerMgr.hpp" />
+    <ClInclude Include="Reconstructed Classes\CNonPhysicalPlayerData.hpp" />
+    <ClInclude Include="Reconstructed Classes\CObject.hpp" />
+    <ClInclude Include="Reconstructed Classes\CObjectPool.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPed.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPedFactory.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPedPool.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPedStyle.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPickup.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPickupPool.hpp" />
+    <ClInclude Include="Reconstructed Classes\CPlayerInfo.hpp" />
+    <ClInclude Include="Reconstructed Classes\CEntityPool.hpp" />
+    <ClInclude Include="Reconstructed Classes\CResolution.hpp" />
+    <ClInclude Include="Reconstructed Classes\CTextInfo.hpp" />
+    <ClInclude Include="Reconstructed Classes\CTimeDate.hpp" />
+    <ClInclude Include="Reconstructed Classes\CVehicle.hpp" />
+    <ClInclude Include="Reconstructed Classes\CVehicleAudio.hpp" />
+    <ClInclude Include="Reconstructed Classes\CVehicleMods.hpp" />
+    <ClInclude Include="Reconstructed Classes\CVehiclePool.hpp" />
+    <ClInclude Include="Reconstructed Classes\CVehicleVisualMods.hpp" />
+    <ClInclude Include="Reconstructed Classes\CWantedData.hpp" />
+    <ClInclude Include="Reconstructed Classes\CWeaponInfo.hpp" />
+    <ClInclude Include="Reconstructed Classes\CWeaponManager.hpp" />
+    <ClInclude Include="Reconstructed Classes\Declarations.hpp" />
+    <ClInclude Include="Reconstructed Classes\IPAddress.hpp" />
+    <ClInclude Include="Reconstructed Classes\netBlender.hpp" />
+    <ClInclude Include="Reconstructed Classes\netBuffer.hpp" />
+    <ClInclude Include="Reconstructed Classes\netObject.hpp" />
+    <ClInclude Include="Reconstructed Classes\netSyncTree.hpp" />
+    <ClInclude Include="Reconstructed Classes\networkSyncData.hpp" />
+    <ClInclude Include="Remote.hpp" />
+    <ClInclude Include="MainScript.hpp" />
+    <ClInclude Include="ScriptCallback.hpp" />
+    <ClInclude Include="ScriptGlobal.hpp" />
+    <ClInclude Include="ScriptHandle.hpp" />
+    <ClInclude Include="ScriptMgr.hpp" />
+    <ClInclude Include="Types.hpp" />
+    <ClInclude Include="User Interface\AbstractOption.hpp" />
+    <ClInclude Include="User Interface\BoolOption.hpp" />
+    <ClInclude Include="User Interface\BreakOption.hpp" />
+    <ClInclude Include="User Interface\ChooseOption.hpp" />
+    <ClInclude Include="User Interface\DrawHelper.hpp" />
+    <ClInclude Include="User Interface\HeaderType.hpp" />
+    <ClInclude Include="User Interface\InstructionalButtons.hpp" />
+    <ClInclude Include="User Interface\KeyPressType.hpp" />
+    <ClInclude Include="User Interface\NumberBoolOption.hpp" />
+    <ClInclude Include="User Interface\NumberOption.hpp" />
+    <ClInclude Include="User Interface\OptionFlags.hpp" />
+    <ClInclude Include="User Interface\SelectedPlayerSubmenu.hpp" />
+    <ClInclude Include="User Interface\SimpleOption.hpp" />
+    <ClInclude Include="User Interface\Manager.hpp" />
+    <ClInclude Include="User Interface\Submenu.hpp" />
+    <ClInclude Include="User Interface\SubmenuOption.hpp" />
+    <ClInclude Include="User Interface\Toggleable.hpp" />
+    <ClInclude Include="Util.hpp" />
+    <ClInclude Include="XorString.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui.cpp" />
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="..\Libraries\Includes\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="CustomText.cpp" />
+    <ClCompile Include="D3DRender.cpp" />
+    <ClCompile Include="Features\AccountOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Features\MiscOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Features\PlayerOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Features\SpoonerOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Features\VehicleOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Features\WeaponModifiers.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Features\WeaponOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Features\WorldOptions.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="LogScript.cpp" />
+    <ClCompile Include="Pointers.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="Invoker.cpp" />
+    <ClCompile Include="Lists.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PrecompiledHeader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MainScript.cpp" />
+    <ClCompile Include="ScriptCallback.cpp" />
+    <ClCompile Include="ScriptGlobal.cpp" />
+    <ClCompile Include="Types.cpp" />
+    <ClCompile Include="User Interface\DrawHelper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="User Interface\InstructionalButtons.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="User Interface\Manager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="User Interface\SelectedPlayerSubmenu.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="User Interface\Submenu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../PrecompiledHeader.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Util.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
